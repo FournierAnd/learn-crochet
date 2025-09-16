@@ -11,15 +11,15 @@ export default function Hero() {
     return (
         <>
             <div className="benefits-list">
-                <p>&#10022;</p>
+                <p className="star">&#10022;</p>
                 <p>Learn basic to advanced spells (stitches).</p>
-                <p>&#10022;</p>
+                <p className="star">&#10022;</p>
                 <p>Master the occult language of crochet patterns and stitch diagrams.</p>
-                <p>&#10022;</p>
+                <p className="star">&#10022;</p>
                 <p>Receive guidance from enchanted talking paintings (YouTube videos).</p>
-                <p>&#10022;</p>
+                <p className="star">&#10022;</p>
                 <p>Ascend to the rank of crochet archmage</p>
-                <p>&#10022;</p>
+                <p className="star">&#10022;</p>
             </div>
             <hr/>
             <div className="last-words">                
@@ -34,21 +34,21 @@ export default function Hero() {
             <div className={`panel ${openAccordion.firstAccordion ? "open" : ""}`}>                    
                 <ul className="rules-list">
                     <li className="rule-item">
-                        <p className="rule-title"><b>Read the patterns carefully</b></p>
+                        <p className="rule-title">Read the patterns carefully</p>
                         <p>
                             Take the time to decipher the written instructions. It gets easier as you progress.
                             Stitch diagrams and Youtube videos will help you understand this ancient, mystic language. <a target="_blank" href="https://haakmaarraak.nl/how-to-read-a-crochet-pattern-chart">Here</a> you'll find a detailed article that will teach you how to read stitch diagrams.</p>
                     </li>
                     <li className="rule-item">
-                        <p className="rule-title"><b>Double-check your stitch count</b></p>
+                        <p className="rule-title">Double-check your stitch count</p>
                         <p>Counting stitches is essential to unlocking your inner crocheter. If your project looks a little wonky, you probably miscounted. Don't worry, just follow the third tip.</p>
                     </li>
                     <li className="rule-item">
-                        <p className="rule-title"><b>Try again</b></p>
+                        <p className="rule-title">Try again</p>
                         <p>Don't be afraid to undo your work. If you've lost track of your stitch count or made a mistake, don't panic. Tug on the yarn to undo your stitches. Crochet is a very forgiving craft.</p>
                     </li>
                     <li className="rule-item">
-                        <p className="rule-title"><b>Experiment</b></p>
+                        <p className="rule-title">Experiment</p>
                         <p>Remember: crochet is not an exact science. As you will see in some videos, variations exist, so do not hesitate to experiment and choose the method you enjoy most. </p>
                     </li>
                 </ul>
@@ -62,44 +62,44 @@ export default function Hero() {
             </button>            
             <div className={`panel panel-grid ${openAccordion.secondAccordion ? "open" : ""}`}>
                 <div className="abbreviations-grid">
-                <div><strong>ch sp</strong></div>
+                <div className="abbreviation">ch sp</div>
                 <div>chain space</div>
-                <div><strong>slip st</strong></div>
+                <div className="abbreviation">slip st</div>
                 <div>slip stitch</div>
 
-                <div><strong>ch(s)</strong></div>
+                <div className="abbreviation">ch(s)</div>
                 <div>chain(s)</div>
-                <div><strong>sp</strong></div>
+                <div className="abbreviation">sp</div>
                 <div>space</div>
 
-                <div><strong>dc</strong></div>
+                <div className="abbreviation">dc</div>
                 <div>double crochet</div>
-                <div><strong>st(s)</strong></div>
+                <div className="abbreviation">st(s)</div>
                 <div>stitch(es)</div>
 
-                <div><strong>dtr</strong></div>
+                <div className="abbreviation">dtr</div>
                 <div>double treble</div>
-                <div><strong>tch</strong></div>
+                <div className="abbreviation">tch</div>
                 <div>turning chain</div>
 
-                <div><strong>hdc</strong></div>
+                <div className="abbreviation">hdc</div>
                 <div>half double crochet</div>
-                <div><strong>tog</strong></div>
+                <div className="abbreviation">tog</div>
                 <div>together</div>
 
-                <div><strong>rep</strong></div>
+                <div className="abbreviation">rep</div>
                 <div>repeat</div>
-                <div><strong>tr</strong></div>
+                <div className="abbreviation">tr</div>
                 <div>treble</div>
 
-                <div><strong>RS</strong></div>
+                <div className="abbreviation">RS</div>
                 <div>right side</div>
-                <div><strong>WS</strong></div>
+                <div className="abbreviation">WS</div>
                 <div>wrong side</div>
 
-                <div><strong>sc</strong></div>
+                <div className="abbreviation">sc</div>
                 <div>single crochet</div>
-                <div><strong>yo</strong></div>
+                <div className="abbreviation">yo</div>
                 <div>yarn over</div>
                 </div>
             </div>

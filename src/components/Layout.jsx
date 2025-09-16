@@ -1,7 +1,7 @@
 export default function Layout(props) {
 
-    const {children} = props
-    
+    const { children } = props
+
     const header = (
         <header>
             <div className="website-header">
@@ -14,9 +14,9 @@ export default function Layout(props) {
     //Add link to portfolio
     const footer = (
         <footer>
-            <p>
-                Built by Andréanne Fournier<br/>                
-            </p>
+            <p className="star">&#10022;</p>
+            <p className="footer-name">Built by Andréanne Fournier</p>
+            <p className="star">&#10022;</p>
         </footer>
     )
 
