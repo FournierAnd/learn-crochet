@@ -6,7 +6,7 @@ export default function Layout(props) {
         <header>
             <div className="website-header">
                 <h1>Hooks & Stitches</h1>
-                <h3>Become a crochet witch or wizard in 30 days</h3>
+                <h3>Learn to crochet 30 stitches in 30 days</h3>
             </div>
         </header>
     )

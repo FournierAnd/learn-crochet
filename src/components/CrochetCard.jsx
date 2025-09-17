@@ -18,7 +18,6 @@ export default function CrochetCard(props) {
         setStitches(newObj);
     }
 
-    //Todo: add modal component here and onClick action for the help button
     return (
         <div className="crochet-container">
             {showStitchDiagram && (
@@ -35,7 +34,7 @@ export default function CrochetCard(props) {
                         return (
                             <React.Fragment key={videoIndex}>
                                 <h2>{videoLink.name}</h2>
-                                <button className="help-icon" onClick={() => {
+                                <button className="help-icon no-dash" onClick={() => {
                                     setShowStitchDiagram({
                                         name: videoLink.name,
                                         diagram: stitchDiagrams[videoLink.name]
@@ -76,27 +75,31 @@ export default function CrochetCard(props) {
             <div className="crochet-grid video-container-padding">
                 {video.map((videoLink, videoIndex) => {
                     return (
-                        <React.Fragment key={videoIndex}>
-                            <div className="video-container">
-                                <iframe
-                                    width={560}
-                                    height={315}
-                                    src={videoLink.link}
-                                    title="YouTube video player"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerPolicy={"strict-origin-when-cross-origin"}
-                                    allowFullScreen
-                                >
-                                </iframe>
-                            </div>
-                        </React.Fragment>
+                        videoLink.link && (
+                            <React.Fragment key={videoIndex}>
+                                <div className="video-container">
+                                    <iframe
+                                        width={560}
+                                        height={315}
+                                        src={videoLink.link}
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy={"strict-origin-when-cross-origin"}
+                                        allowFullScreen
+                                    />
+                                </div>
+                            </React.Fragment>
+                        )
                     )
                 })}
             </div>
 
             <div className="crochet-buttons">
-                <button className="font-buttons" onClick={() => { handleSave(crochetIndex, { stitches }) }}>Save & Exit</button>
+                <button title="Save your progress" className="font-buttons" onClick={() => { handleSave(crochetIndex, { stitches }) }}>
+                    Save & Exit
+                </button>
                 <button
+                    title="Unlock the next day if you've completed all the rows"
                     className="font-buttons"
                     onClick={() => { handleComplete(crochetIndex, { stitches }) }}
                     disabled={Object.keys(stitches).length !== swatch.length}

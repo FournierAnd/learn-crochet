@@ -12,13 +12,13 @@ export default function Hero() {
         <>
             <div className="benefits-list">
                 <p className="star">&#10022;</p>
-                <p>Learn basic to advanced spells (stitches).</p>
+                <p>Learn basic to advanced stitches</p>
                 <p className="star">&#10022;</p>
-                <p>Master the occult language of crochet patterns and stitch diagrams.</p>
+                <p>Learn how to read crochet patterns and stitch diagrams</p>
                 <p className="star">&#10022;</p>
-                <p>Receive guidance from enchanted talking paintings (YouTube videos).</p>
+                <p>Refer to YouTube videos for help</p>
                 <p className="star">&#10022;</p>
-                <p>Ascend to the rank of crochet archmage</p>
+                <p>Unlock your inner crocheter</p>
                 <p className="star">&#10022;</p>
             </div>
             <hr/>
@@ -36,8 +36,8 @@ export default function Hero() {
                     <li className="rule-item">
                         <p className="rule-title">Read the patterns carefully</p>
                         <p>
-                            Take the time to decipher the written instructions. It gets easier as you progress.
-                            Stitch diagrams and Youtube videos will help you understand this ancient, mystic language. <a target="_blank" href="https://haakmaarraak.nl/how-to-read-a-crochet-pattern-chart">Here</a> you'll find a detailed article that will teach you how to read stitch diagrams.</p>
+                            Take the time to decipher the written patterns. It gets easier as you progress.
+                            Stitch diagrams and Youtube videos will help you understand those instructions. <a target="_blank" href="https://haakmaarraak.nl/how-to-read-a-crochet-pattern-chart">Here</a> you'll find a detailed article that will teach you how to read stitch diagrams.</p>
                     </li>
                     <li className="rule-item">
                         <p className="rule-title">Double-check your stitch count</p>
