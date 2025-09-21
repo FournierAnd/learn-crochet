@@ -11,7 +11,7 @@ Learn a new sitch a day with the help of written patterns, stitch diagrams and v
 - 📖 Beginner-friendly crochet lessons  
 - 🎥 Embedded video tutorials  
 - 🖼️ Stitch diagrams
-- 🌓 A light and dark theme
+- 🎨 A yellow and pink theme
 - 📱 Responsive design
 
 ---
