@@ -72,6 +72,18 @@ export default function CrochetCard(props) {
                 })}
             </div>
 
+            <div className="crochet-buttons">
+                <button title="Save your progress" className="font-buttons" onClick={() => { handleSave(crochetIndex, { stitches }) }}>
+                    Save & Exit
+                </button>
+                <button
+                    title="Unlock the next day if you've completed all the rows"
+                    className="font-buttons"
+                    onClick={() => { handleComplete(crochetIndex, { stitches }) }}
+                    disabled={Object.keys(stitches).length !== swatch.length}
+                >Complete</button>
+            </div>
+
             <div className="crochet-grid video-container-padding">
                 {video.map((videoLink, videoIndex) => {
                     return (
@@ -92,18 +104,6 @@ export default function CrochetCard(props) {
                         )
                     )
                 })}
-            </div>
-
-            <div className="crochet-buttons">
-                <button title="Save your progress" className="font-buttons" onClick={() => { handleSave(crochetIndex, { stitches }) }}>
-                    Save & Exit
-                </button>
-                <button
-                    title="Unlock the next day if you've completed all the rows"
-                    className="font-buttons"
-                    onClick={() => { handleComplete(crochetIndex, { stitches }) }}
-                    disabled={Object.keys(stitches).length !== swatch.length}
-                >Complete</button>
             </div>
 
         </div>

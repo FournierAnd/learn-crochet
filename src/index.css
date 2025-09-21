@@ -8,29 +8,29 @@
 :root {
     --background-primary: #fffbf6;
     --background-secondary: #FFECC5;
-    --background-underlay: #4c3f36;
-    --background-underlay-hover: #6f5c4f;
     --background-hover: #ECBF69;
-    --color-primary: #4c3f36;
+    --color-theme: #fca2a4;
+    --color-theme-hover:#FCBFC0;
     --color-link: #b6773c;
     --color-link-hover: #7d532b;
+    --box-shadow-color: rgb(236, 191, 105, 0.3);
+
+    --background-underlay: #4c3f36;
+    --background-underlay-hover: #6f5c4f;
+    --color-primary: #4c3f36;
     --color-input: #fffbf6;
     --border-radius-small: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-primary: #4c3f36;
-        --background-secondary: #6f5c4f;
-        --background-underlay: #4c3f36;
-        --background-underlay-hover: #6f5c4f;
-        --background-hover: #d1a85d;
-        --color-primary: #fffbf6;
-        --color-link: #ECBF69;
-        --color-link-hover: #b6773c;
-        --color-input: #b6773c;
-        --border-radius-small: 4px;
-    }
+.pink {
+    --background-primary: #FEF5F0;
+    --background-secondary: #FCBFC0;
+    --background-hover: #fca0a2;
+    --color-theme: #FFECC5;
+    --color-theme-hover:#ECBF69;
+    --color-link: #cb85e4;
+    --color-link-hover: #a863c2;
+    --box-shadow-color: rgb(255, 173, 175, 0.3);
 }
 
 * {
@@ -46,7 +46,7 @@
 body {
     background-color: var(--background-primary);
     color: var(--color-primary);
-    padding: 1rem 0;
+    padding: 5rem 0 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,6 +72,22 @@ header h1 {
     width: fit-content;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-primary);
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+    z-index: 999;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -83,7 +99,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 0 2rem 0;
+    padding: 1rem 0 0;
     text-align: center;
 }
 
@@ -109,20 +125,12 @@ h2 {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 40px;
 }
 
 h3 {
     font-weight: 600;
     text-align: center;
-}
-
-a {
-    color: var(--color-link);
-}
-
-a:hover {
-    color: var(--color-link-hover);
 }
 
 p {
@@ -189,20 +197,25 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-button {
-    display: flex;
+button,
+.btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: var(--background-secondary);
+    color: var(--color-primary);
     border: none;
     border-radius: var(--border-radius-small);
     padding: 1rem;
     cursor: pointer;
     position: relative;
-    box-shadow: inset 0 0 0 2px transparent;
+    text-decoration: none; /* so <a> looks like button */
+    transition: 200ms;
 }
 
-button::before {
+/* Stitches border effect */
+button::before,
+.btn::before {
     content: "";
     position: absolute;
     inset: 6px;
@@ -211,7 +224,8 @@ button::before {
     pointer-events: none;
 }
 
-button:hover {
+button:hover,
+.btn:hover {
     background-color: var(--background-hover);
 }
 
@@ -224,9 +238,32 @@ button:hover {
     justify-content: center;
 }
 
-.benefits-list {
+.btn-round {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.theme i {
+    color: var(--color-theme);
+}
+
+.theme:hover {
+    background-color: var(--color-theme-hover);
+}
+
+.advices-list {
     text-align: center;
     padding-bottom: 2rem;
+}
+
+.a-hyperlink {
+    color: var(--color-link);
+}
+
+.a-hyperlink:hover {
+    color: var(--color-link-hover);
 }
 
 .star {
@@ -235,8 +272,12 @@ button:hover {
 
 .last-words {
     font-size: 18px;
-    text-align: center;
+    text-align: justify;
     padding: 2rem;
+}
+
+.explanations {
+    padding-top: 1rem;
 }
 
 .accordion {
@@ -295,7 +336,7 @@ button:hover {
     margin: 1rem 0;
 }
 
-.abbreviation{
+.abbreviation {
     font-weight: 800;
 }
 
@@ -432,7 +473,7 @@ button.help-icon {
 }
 
 .no-dash::before {
-  content: none;
+    content: none;
 }
 
 button.help-icon:hover {
@@ -462,7 +503,7 @@ button.help-icon i {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 100;
+    z-index: 1000;
     padding: 1rem;
 }
 
@@ -527,7 +568,7 @@ button.help-icon i {
 @media (min-width: 640px) {
 
     h1 {
-        font-size: 52px;
+        font-size: 70px;
     }
 
     .abbreviations-grid {

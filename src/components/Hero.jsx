@@ -10,7 +10,7 @@ export default function Hero() {
 
     return (
         <>
-            <div className="benefits-list">
+            <div className="advices-list">
                 <p className="star">&#10022;</p>
                 <p>Learn basic to advanced stitches</p>
                 <p className="star">&#10022;</p>
@@ -23,7 +23,14 @@ export default function Hero() {
             </div>
             <hr/>
             <div className="last-words">                
-                <p>Complete all of the exercises below and track your progress along the way.</p>
+                <p>
+                    Complete all of the exercises below and track your progress along the way.
+                </p>
+                <p className="explanations">
+                    To complete a day, make sure you have entered the number of stitches you've
+                    made for each row. If you've started a day but don't have time to complete it,
+                    make sure to save your progress.
+                </p>
             </div>
             <button 
                 className="accordion"
@@ -37,7 +44,7 @@ export default function Hero() {
                         <p className="rule-title">Read the patterns carefully</p>
                         <p>
                             Take the time to decipher the written patterns. It gets easier as you progress.
-                            Stitch diagrams and Youtube videos will help you understand those instructions. <a target="_blank" href="https://haakmaarraak.nl/how-to-read-a-crochet-pattern-chart">Here</a> you'll find a detailed article that will teach you how to read stitch diagrams.</p>
+                            Stitch diagrams and Youtube videos will help you understand those instructions. <a target="_blank" href="https://haakmaarraak.nl/how-to-read-a-crochet-pattern-chart" className="a-hyperlink ">Here</a> you'll find a detailed article that will teach you how to read stitch diagrams.</p>
                     </li>
                     <li className="rule-item">
                         <p className="rule-title">Double-check your stitch count</p>
