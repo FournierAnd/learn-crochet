@@ -10,7 +10,7 @@
     --background-secondary: #FFECC5;
     --background-hover: #ECBF69;
     --color-theme: #fca2a4;
-    --color-theme-hover:#FCBFC0;
+    --color-theme-hover: #FCBFC0;
     --color-link: #b6773c;
     --color-link-hover: #7d532b;
     --box-shadow-color: rgb(236, 191, 105, 0.3);
@@ -27,7 +27,7 @@
     --background-secondary: #FCBFC0;
     --background-hover: #fca0a2;
     --color-theme: #FFECC5;
-    --color-theme-hover:#ECBF69;
+    --color-theme-hover: #ECBF69;
     --color-link: #cb85e4;
     --color-link-hover: #a863c2;
     --box-shadow-color: rgb(255, 173, 175, 0.3);
@@ -46,19 +46,19 @@
 body {
     background-color: var(--background-primary);
     color: var(--color-primary);
-    padding: 5rem 0 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 2rem 1rem 0;
 }
 
 header,
 main,
 footer {
+    background-color: var(--background-primary);
     width: 100%;
     max-width: 700px;
-    padding: 1rem;
     margin: 0 auto;
 }
 
@@ -66,6 +66,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 0.25 rem;
+    margin-top: 5rem;
 }
 
 header h1 {
@@ -99,8 +100,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 0 0;
     text-align: center;
+    padding-top: 2rem;
 }
 
 .footer-name {
@@ -209,7 +210,8 @@ button,
     padding: 1rem;
     cursor: pointer;
     position: relative;
-    text-decoration: none; /* so <a> looks like button */
+    text-decoration: none;
+    /* so <a> looks like button */
     transition: 200ms;
 }
 
@@ -438,7 +440,7 @@ button:hover,
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 0;
     border: 4px dashed var(--color-primary);
     border-radius: var(--border-radius-small);
 }
@@ -566,6 +568,21 @@ button.help-icon i {
 }
 
 @media (min-width: 640px) {
+
+    body {
+        background: url("/src/assets/bg-custom-motif.svg") repeat fixed;
+        background-size: auto;
+        padding: 0;
+    }
+
+    header,
+    main {
+        padding: 2rem;
+    }
+
+    footer {
+        padding: 0rem 2rem 2rem;
+    }
 
     h1 {
         font-size: 70px;
