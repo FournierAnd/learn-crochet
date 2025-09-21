@@ -570,7 +570,7 @@ button.help-icon i {
 @media (min-width: 640px) {
 
     body {
-        background: url("/src/assets/bg-custom-motif.svg") repeat fixed;
+        background: url("/src/assets/bg-custom-motif-optimized.svg") repeat fixed;
         background-size: auto;
         padding: 0;
     }
